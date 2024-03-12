@@ -1,0 +1,49 @@
+// DB Creation
+
+DATABASE NAME - meltshake
+
+CREATE TABLE products (
+    productCode VARCHAR(255),
+    flavour VARCHAR(255),
+    size VARCHAR(255),
+    quantity INT,
+    price DOUBLE,
+    PRIMARY KEY (productCode)
+);
+
+
+CREATE TABLE cart (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    productCode VARCHAR(255),
+    quantity INT,
+    UNIQUE KEY (productCode)
+);
+
+
+// Insertion
+INSERT INTO Products (productCode, flavour, size, quantity, price) VALUES
+('A','A', '500ml', 1, 120.0);
+INSERT INTO Products (productCode, flavour, size, quantity, price) VALUES
+('B','B', '500ml', 1, 120.0);
+INSERT INTO Products (productCode, flavour, size, quantity, price) VALUES
+('C','C', '500ml', 1, 120.0);
+INSERT INTO Products (productCode, flavour, size, quantity, price) VALUES
+('D','D', '500ml', 1, 120.0);
+
+INSERT INTO Products (productCode, flavour, size, quantity, price) VALUES
+('AAA','A', '500ml', 3, 330.0);
+INSERT INTO Products (productCode, flavour, size, quantity, price) VALUES
+('BBB','B', '500ml', 3, 330.0);
+INSERT INTO Products (productCode, flavour, size, quantity, price) VALUES
+('CCC','C', '500ml', 3, 330.0);
+INSERT INTO Products (productCode, flavour, size, quantity, price) VALUES
+('DDD','D', '500ml', 3, 330.0);
+
+INSERT INTO Products (productCode, flavour, size, quantity, price) VALUES
+('AAAAA','A', '500ml', 5, 500.0);
+INSERT INTO Products (productCode, flavour, size, quantity, price) VALUES
+('BBBBB','B', '500ml', 5, 500.0);
+INSERT INTO Products (productCode, flavour, size, quantity, price) VALUES
+('CCCCC','C', '500ml', 5, 500.0);
+INSERT INTO Products (productCode, flavour, size, quantity, price) VALUES
+('DDDDD','D', '500ml', 5, 500.0);
